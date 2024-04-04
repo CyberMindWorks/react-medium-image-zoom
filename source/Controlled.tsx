@@ -514,12 +514,13 @@ class ControlledBase extends React.Component<ControlledPropsWithDefaults, Contro
    */
   handleWheel = (e: WheelEvent) => {
     // don't handle the event when the user is zooming with ctrl + wheel (or with pinch to zoom)
-    if (e.ctrlKey) return
+    return;
+    // if (e.ctrlKey) return
 
-    e.stopPropagation()
-    queueMicrotask(() => {
-      this.handleUnzoom()
-    })
+    // e.stopPropagation()
+    // queueMicrotask(() => {
+    //   this.handleUnzoom()
+    // })
   }
 
   /**
